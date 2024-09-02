@@ -48,7 +48,7 @@ Users should be able to:
 ### What I learned
 - Card Layout Design:
 The interface uses a card layout to display the title, publication date, article type (learning), and author.
-You can learn how to use HTML tags like <div>, <img>, <h2>, <p>, <span>, and <footer> to organize content in a structured way.
+You can learn how to use HTML tags to organize content in a structured way.
 - Using CSS for Layout and Styling:
 Shadow Effect: The subtle shadow makes the card stand out from the background. You can learn how to use the box-shadow property to create this effect.
 Border Radius: The card corners are rounded to give a softer appearance. The border-radius property can be used for this purpose.
