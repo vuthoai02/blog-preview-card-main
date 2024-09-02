@@ -1,34 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <!-- Open Graph Meta Tags -->
+    <meta
+      property="og:title"
+      content="This HTML & CSS-only challenge is a perfect project for beginners getting up to speed with HTML and CSS fundamentals, like HTML structure and the box model."
+    />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="./assets/images/image-avatar.webp" />
+    <meta property="og:url" content="https://frontendmentor.io" />
+    <meta property="og:type" content="website" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Blog preview card</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | Blog preview card</title>
 
-  Learning
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      * {
+        font-family: "Figtree", sans-serif;
+      }
 
-  Published 21 Dec 2023
+      body {
+        background-color: hsl(47, 88%, 63%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
 
-  HTML & CSS foundations
+      .card-component {
+        height: 90vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
 
-  These languages are the backbone of every website, defining structure, content, and presentation.
+      @media screen and (max-width: 376px) {
+        .card-component .card {
+          width: 80%;
+          box-shadow: rgba(0, 0, 0, 1) 8px 8px 2.6px;
+        }
 
-  Greg Hooper
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+        .card-component .card .card-content .card-content-header .card-chip {
+          font-size: 12px;
+        }
+
+        .card-component .card .card-content .card-content-header .card-date{
+          font-size: 12px;
+          color: hsl(47, 88%, 63%);
+        }
+
+        .card-component .card .card-content .card-content-body .card-body-description {
+          font-size: 14px;
+        }
+      }
+
+      @media screen and (min-width: 376px){
+        .card-component .card {
+          width: 45%;
+          box-shadow: rgba(0, 0, 0, 1) 10px 10px 2.6px;
+        }
+
+        .card-component .card .card-content .card-content-header .card-date{
+          font-size: 14px;
+        }
+      }
+
+      .card-component .card {
+        background-color: hsl(0, 0%, 100%);
+        border-radius: 20px;
+        border: 2px solid hsl(0, 0%, 42%);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+      }
+
+
+      .card-component .card .card-media{
+        margin: 0;
+      }
+
+      .card-component .card .card-media .card-image {
+        width: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+
+      .card-component .card .card-content .card-content-header .card-chip {
+        display: inline-block;
+        padding: 5px;
+        background-color: hsl(47, 88%, 63%);
+        margin: 10px 0;
+        border-radius: 5px;
+      }
+
+      .card-component .card .card-content .card-content-header .card-date{
+        color: hsl(0, 0%, 7%);
+        margin: 0;
+      }
+
+      .card-component .card .card-content .card-content-header .card-title:active {
+        color: hsl(47, 88%, 63%);
+        cursor: pointer;
+      }
+
+      .card-component .card .card-content .card-content-body .card-body-description {
+        color: hsl(0, 0%, 42%);
+      }
+
+      .card-component .card .card-content .card-content-footer {
+        display: flex;
+        align-items: center;
+      }
+
+      .card-component .card .card-content .card-content-footer .card-avatar {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        margin-right: 10px;
+      }
+
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <section class="card-component">
+      <article class="card">
+        <figure class="card-media">
+          <img
+            src="./assets/images/image.png"
+            alt="Blog preview card"
+            class="card-image"
+          />
+        </figure>
+        <div class="card-content">
+          <div class="card-content-header">
+            <h5 class="card-chip">Learning</h5>
+            <p class="card-date">Published 21 Dec 2023</p>
+            <h1 class="card-title">HTML & CSS foundations</h1>
+          </div>
+          <div class="card-content-body">
+            <p class="card-body-description">
+              These languages are the backbone of every website, defining
+              structure, content, and presentation.
+            </p>
+          </div>
+          <div class="card-content-footer">
+            <img
+              src="./assets/images/image-avatar.webp"
+              alt="Author avatar"
+              class="card-avatar"
+            />
+            <h5>Greg Hooper</h5>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="https://www.frontendmentor.io/profile/vuthoai02">@vuthoai02</a>.
+    </div>
+  </body>
 </html>
